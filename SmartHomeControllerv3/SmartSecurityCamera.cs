@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,14 @@ namespace SmartHomeController
             {
                 Console.WriteLine($"{DeviceName} is not currently recording.");
             }
-        }     
+        }
+
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("This is a security camera");
+            Console.WriteLine($"Resolution: {Resolution}");
+        }
+
     }
 }
